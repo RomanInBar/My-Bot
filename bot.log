@@ -74,3 +74,14 @@ KeyError: 'img_src'
 2021-08-29 15:09:07,352 INFO:  сиська
 2021-08-29 15:09:08,563 INFO:  {'url': 'https://www.e1.ru/text/style/2021/08/29/70104824/', 'title': 'Интервью о том, как зарабатывать телом в интернете без пошлости', 'publishedDate': '17 hour(s), 39 minute(s) ago', 'content': 'Из серии: «О, вот это сиськи, вот это дойки!» — очень любят писать. Что за бред? Не то что я скрываюсь или прячусь — просто одеваюсь поскромнее.', 'img_src': 'http://www.bing.com/th?id=OVFT.8jJWdlPX-93oBBRGVg6x6C&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'www.e1.ru', '/text/style/2021/08/29/70104824/', '', '', ''], 'engines': ['bing news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://www.e1.ru/text/style/2021/08/29/70104824/', 'pubdate': '2021-08-28 21:30:00+0000'}
 2021-08-29 15:09:08,711 INFO:  Сообщение отправлено.
+2021-08-29 15:27:55,163 INFO:  Scheduler started
+2021-08-29 15:27:55,655 INFO:  gjujlf
+2021-08-29 15:27:56,876 INFO:  {'url': 'https://charter97.org/ru/news/2021/8/28/434929/', 'title': 'Стало известно, какой будет погода в Беларуси в последние дни августа', 'content': "Хартия '97Вчераbookmark_bordersharemore_vert", 'img_src': 'https://lh3.googleusercontent.com/proxy/xFmAu8lC54XjZCqR5Qf8WO1iSpp6zhnm6dNhUioAeWHD2RH8LGRXBbgwO4JuiQtLTiSYybA5TDHMt95sUmUAX9noN8eZ8j_smqwQ8IwnnNeTND9NgpXQAZwvlspKEv7rIVdbRFWvMHwc=s0-w100-h100-p-df', 'engine': 'google news', 'parsed_url': ['https', 'charter97.org', '/ru/news/2021/8/28/434929/', '', '', ''], 'engines': ['google news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://charter97.org/ru/news/2021/8/28/434929/'}
+2021-08-29 15:27:56,986 INFO:  Сообщение отправлено.
+2021-08-29 15:27:57,107 INFO:  Ответ "погода" сформирован
+2021-08-29 15:27:57,207 INFO:  Сообщение отправлено.
+2021-08-29 15:27:57,318 INFO:  Ответ "погода" сформирован
+2021-08-29 15:27:57,419 INFO:  Сообщение отправлено.
+2021-08-29 15:27:57,419 INFO:  машина
+2021-08-29 15:28:00,323 INFO:  {'url': 'https://www.ntv.ru/novosti/2598364/', 'title': 'В Тюмени спешившая на вызов пожарная машина провалилась в фонтан', 'publishedDate': 'Aug 28, 2021', 'content': 'На кадрах видно, как автомобиль на скорости въехал в фонтан, которые был вмонтирован в землю. Машина спешила к многоэтажному дому, в котором произошел сильный пожар. В паблике «ДТП в Тюмени» в социаль ...', 'img_src': 'http://www.bing.com/th?id=OVFT.EeWYgyVyrDGxHpa6HZOBzC&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'www.ntv.ru', '/novosti/2598364/', '', '', ''], 'engines': ['bing news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://www.ntv.ru/novosti/2598364/', 'pubdate': '2021-08-28 10:23:00+0000'}
+2021-08-29 15:28:00,451 INFO:  Сообщение отправлено.
