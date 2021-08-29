@@ -3,9 +3,9 @@ from telegram.ext import Updater, Filters, MessageHandler, CommandHandler
 import logging
 import requests
 import os
+import random
 
 from dotenv import load_dotenv
-from random import choice
 
 load_dotenv()
 
@@ -29,7 +29,8 @@ def searh_func(message):
     asc = message[0]
     logging.info(asc)
     response = requests.get(f'https://searx.roughs.ru/search?q={asc}&format=json&categories=news').json()
-    first_new = response['results'][0]
+    num_new = random.randint(1, 5)
+    first_new = response['results'][num_new]
     logging.info(response['results'][0])
     return f'{first_new["title"]}\n{first_new["content"]}\n{first_new["img_src"]}\n{first_new["pretty_url"]}'
 
@@ -37,9 +38,9 @@ def searh_func(message):
 def get_weather():
     response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q=Москва&appid={WEATHER_KEY}&lang=ru').json()
     weather = response['weather'][0]
-    temp = round((response['main']['temp']) - 273.15, 2)
+    temp = round((response['main']['temp']) - 273.15, 1)
     logging.info('Ответ "погода" сформирован')
-    return f'{weather["description"].title()}.\nТемпература: {temp}'
+    return f'{weather["description"]}.\nТемпература: {temp}'
     
 
 def say_hi(update, context):
