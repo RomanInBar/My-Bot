@@ -26,12 +26,12 @@ weather_list = ['погода', 'погоду']
 
 
 def searh_func(message):
-    asc = message[0]
-    logging.info(asc)
+    asc = message.strip().replace(' ', '%20')
     response = requests.get(f'https://searx.roughs.ru/search?q={asc}&format=json&categories=news').json()
     num_new = random.randint(1, 5)
     first_new = response['results'][num_new]
     logging.info(response['results'][0])
+    logging.info('Ответ "запрос/поиск" сформирован')
     return f'{first_new["title"]}\n{first_new["content"]}\n{first_new["img_src"]}\n{first_new["pretty_url"]}'
 
 
@@ -40,13 +40,13 @@ def get_weather():
     weather = response['weather'][0]
     temp = round((response['main']['temp']) - 273.15, 1)
     logging.info('Ответ "погода" сформирован')
-    return f'{weather["description"]}.\nТемпература: {temp}'
+    return f'{(weather["description"]).capitalize()}.\nТемпература: {temp}'
     
 
 def say_hi(update, context):
     chat = update.effective_chat
-    message = (update.message.text).lower().split()
-    if [x for x in weather_list if x in message]:
+    message = (update.message.text).lower()
+    if [x for x in weather_list if x in message.split()]:
         text = get_weather()
     else:
         text = searh_func(message)
