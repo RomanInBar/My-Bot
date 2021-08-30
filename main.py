@@ -27,22 +27,41 @@ chat_id = CHAT_ID
 weather_list = ['погода', 'погоду']
 
 
-def searh_func(update, context):
-    chat = update.effective_chat
-    message = (update.message.text).lower()
-    asc = message.strip().replace(' ', '%20')
-    response = requests.get(
-        f'https://searx.roughs.ru/search?q={asc}&format=json&categories=news'
-    ).json()
-    num_new = random.randint(1, 5)
-    first_new = response['results'][num_new]
-    text = (
+def get_news(first_new):
+    return (
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
     )
-    logging.info('Ответ "запрос/поиск" сформирован')
-    context.bot.send_message(chat_id=chat.id, text=text)
-    logging.info('Сообщение "searh_func" отправлено.')
+
+
+def get_images(first_new):
+    return (f'{first_new["img_src"]}')
+
+
+def get_videos(first_new):
+    return (f'{first_new["url"]}')
+
+
+def get_content(update, context):
+    message = (update.message.text).lower().strip().split()
+    categories = {
+        'новости': ('news', get_news),
+        'картинка': ('images', get_images),
+        'фото': ('images', get_images),
+        'видео': ('videos', get_videos)
+    }
+    category, func = categories[message[0]]
+    message = ''.join(message[1:]).replace(' ', '%20')
+    response = requests.get(
+        f'https://searx.roughs.ru/search?q={message}&'
+        f'format=json&categories={category}'
+    ).json()
+    num_new = random.randint(1, 5)
+    first_new = response['results'][num_new]
+    text = func(first_new)
+    logging.info('Ответ "get_content" сформирован')
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
+    logging.info('Сообщение "get_comtent" отправлено.')
 
 
 def get_weather(update, context):
@@ -54,7 +73,7 @@ def get_weather(update, context):
     weather = response['weather'][0]
     temp = round((response['main']['temp']) - 273.15, 1)
     text = f'{(weather["description"]).capitalize()}.\nТемпература: {temp}'
-    logging.info('Ответ "погода" сформирован.')
+    logging.info('Ответ "get_weather" сформирован.')
     context.bot.send_message(chat_id=chat.id, text=text)
     logging.info('Сообщение "get_weather" отправлено.')
 
@@ -73,7 +92,7 @@ updater.dispatcher.add_handler(
         Filters.regex(re.compile(r'погод.', re.IGNORECASE)), get_weather
     )
 )
-updater.dispatcher.add_handler(MessageHandler(Filters.text, searh_func))
+updater.dispatcher.add_handler(MessageHandler(Filters.text, get_content))
 
 
 updater.start_polling()
