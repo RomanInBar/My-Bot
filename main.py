@@ -36,11 +36,11 @@ def searh_func(update, context):
     ).json()
     num_new = random.randint(1, 5)
     first_new = response['results'][num_new]
-    logging.info('Ответ "запрос/поиск" сформирован')
     text = (
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
     )
+    logging.info('Ответ "запрос/поиск" сформирован')
     context.bot.send_message(chat_id=chat.id, text=text)
     logging.info('Сообщение "searh_func" отправлено.')
 
