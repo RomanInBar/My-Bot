@@ -1,32 +1,5 @@
-2021-08-29 20:21:57,493 INFO:  Ответ "погода" сформирован
-2021-08-29 20:21:57,910 INFO:  Сообщение отправлено.
-2021-08-29 20:23:01,473 INFO:  Scheduler started
-2021-08-29 20:23:05,181 INFO:  %20м%20а%20ш%20и%20н%20а%20
-2021-08-29 20:23:07,225 INFO:  {'url': 'https://www.tula.kp.ru/online/news/4418776/', 'title': 'Деревни, дачные поселки и дома: где в Туле не будет электроэнергии 30 августа', 'publishedDate': '12 hour(s), 22 minute(s) ago', 'content': 'Дачный, 1-12; Орловское ш., 87-а, 89, 91, 93, 95, 97-а ... Тихмянова 1-п; 12-й пр-зд 2, 2-а, 12, 18-а; 10-й пр-зд 1-н, 1-м, 1-д, 1-и, 1-л, 1-к, 2-и, 2-з; 9-й пр-зд, 34, 39-а; 10-й пр-зд, 40-52 ...', 'img_src': 'http://www.bing.com/th?id=OVFT.c7xZGny-ZTe8hZftwVSKQC&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'www.tula.kp.ru', '/online/news/4418776/', '', '', ''], 'engines': ['bing news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://www.tula.kp.ru/online/news/4418776/', 'pubdate': '2021-08-29 08:01:00+0000'}
-2021-08-29 20:23:07,225 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:23:07,512 INFO:  Сообщение отправлено.
-2021-08-29 20:24:26,506 INFO:  %20м%20а%20ш%20и%20н%20а%20
-2021-08-29 20:24:27,389 INFO:  {'url': 'https://www.tula.kp.ru/online/news/4418776/', 'title': 'Деревни, дачные поселки и дома: где в Туле не будет электроэнергии 30 августа', 'publishedDate': '12 hour(s), 23 minute(s) ago', 'content': 'Дачный, 1-12; Орловское ш., 87-а, 89, 91, 93, 95, 97-а ... Тихмянова 1-п; 12-й пр-зд 2, 2-а, 12, 18-а; 10-й пр-зд 1-н, 1-м, 1-д, 1-и, 1-л, 1-к, 2-и, 2-з; 9-й пр-зд, 34, 39-а; 10-й пр-зд, 40-52 ...', 'img_src': 'http://www.bing.com/th?id=OVFT.c7xZGny-ZTe8hZftwVSKQC&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'www.tula.kp.ru', '/online/news/4418776/', '', '', ''], 'engines': ['bing news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://www.tula.kp.ru/online/news/4418776/', 'pubdate': '2021-08-29 08:01:00+0000'}
-2021-08-29 20:24:27,389 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:24:27,588 INFO:  Сообщение отправлено.
-2021-08-29 20:25:08,693 INFO:  Scheduler started
-2021-08-29 20:25:12,212 INFO:  машина
-2021-08-29 20:25:12,212 INFO:  %20м%20а%20ш%20и%20н%20а%20
-2021-08-29 20:25:13,034 INFO:  {'url': 'https://www.tula.kp.ru/online/news/4418776/', 'title': 'Деревни, дачные поселки и дома: где в Туле не будет электроэнергии 30 августа', 'publishedDate': '12 hour(s), 24 minute(s) ago', 'content': 'Дачный, 1-12; Орловское ш., 87-а, 89, 91, 93, 95, 97-а ... Тихмянова 1-п; 12-й пр-зд 2, 2-а, 12, 18-а; 10-й пр-зд 1-н, 1-м, 1-д, 1-и, 1-л, 1-к, 2-и, 2-з; 9-й пр-зд, 34, 39-а; 10-й пр-зд, 40-52 ...', 'img_src': 'http://www.bing.com/th?id=OVFT.c7xZGny-ZTe8hZftwVSKQC&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'www.tula.kp.ru', '/online/news/4418776/', '', '', ''], 'engines': ['bing news'], 'positions': [1], 'score': 1.0, 'category': 'news', 'pretty_url': 'https://www.tula.kp.ru/online/news/4418776/', 'pubdate': '2021-08-29 08:01:00+0000'}
-2021-08-29 20:25:13,034 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:25:13,343 INFO:  Сообщение отправлено.
-2021-08-29 20:25:37,723 INFO:  Scheduler started
-2021-08-29 20:25:40,912 INFO:  машина
-2021-08-29 20:25:40,912 INFO:  машина
-2021-08-29 20:25:41,817 INFO:  {'url': 'https://moslenta.ru/news/zakhlamlennaya-mashina-v-odnom-iz-moskovskikh-dvorov-razveselila-rossiyan-29-08-2021.htm', 'title': 'Захламленная машина в одном из московских дворов развеселила россиян', 'publishedDate': '18 hour(s), 55 minute(s) ago', 'content': 'Фотография забитого вещами автомобиля с табличкой «Машина не продается!» развеселила пользователей сети. Снимок появился в Facebook-группе «Нагатино — это мы!» ...', 'img_src': 'http://www.bing.com/th?id=OVFT.TTRdzr5iYs4wT9A3Ien15C&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'moslenta.ru', '/news/zakhlamlennaya-mashina-v-odnom-iz-moskovskikh-dvorov-razveselila-rossiyan-29-08-2021.htm', '', '', ''], 'engines': ['bing news', 'google news'], 'positions': [7, 2], 'score': 1.2857142857142856, 'category': 'news', 'pretty_url': 'https://moslenta.ru/news/zakhlamlennay[...]ov-razveselila-rossiyan-29-08-2021.htm', 'pubdate': '2021-08-29 01:30:00+0000'}
-2021-08-29 20:25:41,817 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:25:42,061 INFO:  Сообщение отправлено.
-2021-08-29 20:25:58,344 INFO:  красная машина
-2021-08-29 20:25:58,344 INFO:  красная%20машина
-2021-08-29 20:25:59,753 INFO:  {'url': 'https://rossaprimavera.ru/article/5f7dbf34', 'title': 'Машина биоразведки, новая ракета и «Пенициллин». Что показали на «Армии»', 'publishedDate': 'Aug 27, 2021', 'content': 'В наше неспокойное время особый интерес вызывает и машина радиационной, химической и биологической разведки РХМ-9 ...', 'img_src': 'http://www.bing.com/th?id=OVFT.a3v3oeNnB_ot8sDyXFrfEC&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'rossaprimavera.ru', '/article/5f7dbf34', '', '', ''], 'engines': ['bing news', 'google news'], 'positions': [1, 10], 'score': 2.2, 'category': 'news', 'pretty_url': 'https://rossaprimavera.ru/article/5f7dbf34', 'pubdate': '2021-08-27 06:12:00+0000'}
-2021-08-29 20:25:59,753 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:25:59,855 INFO:  Сообщение отправлено.
-2021-08-29 20:27:05,779 INFO:  Scheduler started
-2021-08-29 20:27:13,958 INFO:  {'url': 'https://news.finance.ua/ru/news/-/499144/do-kakoj-otmetki-mozhet-podorozhat-zoloto-k-kontsu-goda-prognoz-metals-focus', 'title': 'До какой отметки может подорожать золото к концу года — прогноз Metals Focus', 'publishedDate': '12 hour(s), 4 minute(s) ago', 'content': 'Такой прогноз на днях озвучили эксперты компании – ведущего консультанта на рынке драгметаллов Metals Focus. По мнению аналитиков Metals Focus, в ближайшей перспективе рост золотых котировок может быт ...', 'img_src': 'http://www.bing.com/th?id=OVFT.dr-ve0q0SBwQwYJFZLjcji&pid=News', 'engine': 'bing news', 'parsed_url': ['https', 'news.finance.ua', '/ru/news/-/499144/do-kakoj-otmetki-mozhet-podorozhat-zoloto-k-kontsu-goda-prognoz-metals-focus', '', '', ''], 'engines': ['bing news', 'google news'], 'positions': [2, 52], 'score': 1.0384615384615385, 'category': 'news', 'pretty_url': 'https://news.finance.ua/ru/news/-/4991[...]oto-k-kontsu-goda-prognoz-metals-focus', 'pubdate': '2021-08-29 08:23:00+0000'}
-2021-08-29 20:27:13,958 INFO:  Ответ "запрос/поиск" сформирован
-2021-08-29 20:27:14,257 INFO:  Сообщение отправлено.
+2021-08-30 12:03:45,467 INFO:  Scheduler started
+2021-08-30 12:03:45,891 INFO:  Ответ "погода" сформирован.
+2021-08-30 12:03:46,085 INFO:  Сообщение "get_weather" отправлено.
+2021-08-30 12:03:54,090 INFO:  Ответ "запрос/поиск" сформирован
+2021-08-30 12:03:54,202 INFO:  Сообщение "searh_func" отправлено.
