@@ -27,7 +27,7 @@ chat_id = CHAT_ID
 
 def get_news(update, context):
     first_new = get_content(update, category='news')
-    text =  (
+    text = (
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
     )
@@ -43,12 +43,14 @@ def get_images(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
     logging.info('Сообщение "get_images" отправлено.')
 
+
 def get_videos(update, context):
     first_new = get_content(update, category='videos')
     text = f'{first_new["url"]}'
     logging.info('Ответ "get_videos" сформирован')
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
     logging.info('Сообщение "get_videos" отправлено.')
+
 
 def get_content(update, category):
     message = (update.message.text).lower().strip().replace(' ', '%20')
@@ -59,8 +61,8 @@ def get_content(update, category):
     first_new = response['results'][random.randint(1, 5)]
     return first_new
 
+
 def get_weather(update, context):
-    chat = update.effective_chat
     response = requests.get(
         f'http://api.openweathermap.org/data/2.5/'
         f'weather?q=Москва&appid={WEATHER_KEY}&lang=ru'
@@ -69,14 +71,13 @@ def get_weather(update, context):
     temp = round((response['main']['temp']) - 273.15, 1)
     text = f'{(weather["description"]).capitalize()}.\nТемпература: {temp}'
     logging.info('Ответ "get_weather" сформирован.')
-    context.bot.send_message(chat_id=chat.id, text=text)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
     logging.info('Сообщение "get_weather" отправлено.')
 
 
 def wake_up(update, context):
-    chat = update.effective_chat
     context.bot.send_message(
-        chat_id=chat.id, text='Спасибо что включили меня! :)'
+        chat_id=update.effective_chat.id, text='Спасибо что включили меня! :)'
     )
     logging.info('Сообщение "wake_up" отправлено.')
 
@@ -89,7 +90,8 @@ updater.dispatcher.add_handler(
 )
 updater.dispatcher.add_handler(
     MessageHandler(
-        Filters.regex(re.compile(r'фот\w+|картин\w+', re.IGNORECASE)), get_images
+        Filters.regex(re.compile(r'фот\w+|картин\w+', re.IGNORECASE)),
+        get_images,
     )
 )
 updater.dispatcher.add_handler(
