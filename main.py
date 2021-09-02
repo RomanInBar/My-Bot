@@ -28,6 +28,7 @@ weather_list = ['погода', 'погоду']
 
 
 def get_news(first_new):
+    logging.info('Ответ "get_news" сформирован')
     return (
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
@@ -35,10 +36,12 @@ def get_news(first_new):
 
 
 def get_images(first_new):
+    logging.info('Ответ "get_images" сформирован')
     return (f'{first_new["img_src"]}')
 
 
 def get_videos(first_new):
+    logging.info('Ответ "get_videos" сформирован')
     return (f'{first_new["url"]}')
 
 
@@ -59,7 +62,6 @@ def get_content(update, context):
     num_new = random.randint(1, 5)
     first_new = response['results'][num_new]
     text = func(first_new)
-    logging.info('Ответ "get_content" сформирован')
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
     logging.info('Сообщение "get_comtent" отправлено.')
 
