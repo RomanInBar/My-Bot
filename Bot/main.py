@@ -16,7 +16,7 @@ CHAT_ID = os.getenv('CHAT_ID')
 
 logging.basicConfig(
     level=logging.INFO,
-    filename='My-Bot/Bot/bot.log',
+    filename='Bot/bot.log',
     format='%(asctime)s %(levelname)s:  %(message)s',
 )
 
