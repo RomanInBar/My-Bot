@@ -10,7 +10,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
 load_dotenv()
 
-WEATHER_KEY = os.getenv('weather_api_key')
+WEATHER_KEY = os.getenv('WEATHER_API_KEY')
 TELEGRAMM_TOKEN = os.getenv('TELEGRAMM_TOKEN')
 CHAT_ID = os.getenv('CHAT_ID')
 
@@ -31,19 +31,19 @@ def get_news(update, context):
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
     )
-    push_message(update, context, text, func_name='get_news')
+    send_message(update, context, text, func_name='get_news')
 
 
 def get_images(update, context):
     first_new = get_content(update, category='images')
     text = f'{first_new["img_src"]}'
-    push_message(update, context, text, func_name='get_images')
+    send_message(update, context, text, func_name='get_images')
 
 
 def get_videos(update, context):
     first_new = get_content(update, category='videos')
     text = f'{first_new["url"]}'
-    push_message(update, context, text, func_name='get_videos')
+    send_message(update, context, text, func_name='get_videos')
 
 
 def get_content(update, category):
@@ -64,15 +64,15 @@ def get_weather(update, context):
     weather = response['weather'][0]
     temp = round((response['main']['temp']) - 273.15, 1)
     text = f'{(weather["description"]).capitalize()}.\nТемпература: {temp}'
-    push_message(update, context, text, func_name='get_weather')
+    send_message(update, context, text, func_name='get_weather')
 
 
 def wake_up(update, context):
     text = 'Спасибо что включили меня! :)'
-    push_message(update, context, text, func_name='wake_up')
+    send_message(update, context, text, func_name='wake_up')
 
 
-def push_message(update, context, text, func_name):
+def send_message(update, context, text, func_name):
     logging.info(f'Ответ "{func_name}" сформирован')
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
     logging.info(f'Сообщение "{func_name}" отправлено.')
