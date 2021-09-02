@@ -24,8 +24,6 @@ bot = Bot(token=TELEGRAMM_TOKEN)
 updater = Updater(token=TELEGRAMM_TOKEN, use_context=True)
 chat_id = CHAT_ID
 
-weather_list = ['погода', 'погоду']
-
 
 def get_news(update, context):
     first_new = get_content(update, category='news')
