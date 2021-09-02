@@ -31,25 +31,19 @@ def get_news(update, context):
         f'{first_new["title"]}\n{first_new["content"]}\n'
         f'{first_new["img_src"]}\n{first_new["pretty_url"]}'
     )
-    logging.info('Ответ "get_news" сформирован')
-    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
-    logging.info('Сообщение "get_news" отправлено.')
+    push_message(update, context, text, func_name='get_news')
 
 
 def get_images(update, context):
     first_new = get_content(update, category='images')
     text = f'{first_new["img_src"]}'
-    logging.info('Ответ "get_images" сформирован')
-    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
-    logging.info('Сообщение "get_images" отправлено.')
+    push_message(update, context, text, func_name='get_images')
 
 
 def get_videos(update, context):
     first_new = get_content(update, category='videos')
     text = f'{first_new["url"]}'
-    logging.info('Ответ "get_videos" сформирован')
-    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
-    logging.info('Сообщение "get_videos" отправлено.')
+    push_message(update, context, text, func_name='get_videos')
 
 
 def get_content(update, category):
@@ -70,16 +64,18 @@ def get_weather(update, context):
     weather = response['weather'][0]
     temp = round((response['main']['temp']) - 273.15, 1)
     text = f'{(weather["description"]).capitalize()}.\nТемпература: {temp}'
-    logging.info('Ответ "get_weather" сформирован.')
-    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
-    logging.info('Сообщение "get_weather" отправлено.')
+    push_message(update, context, text, func_name='get_weather')
 
 
 def wake_up(update, context):
-    context.bot.send_message(
-        chat_id=update.effective_chat.id, text='Спасибо что включили меня! :)'
-    )
-    logging.info('Сообщение "wake_up" отправлено.')
+    text = 'Спасибо что включили меня! :)'
+    push_message(update, context, text, func_name='wake_up')
+
+
+def push_message(update, context, text, func_name):
+    logging.info(f'Ответ "{func_name}" сформирован')
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text)
+    logging.info(f'Сообщение "{func_name}" отправлено.')
 
 
 updater.dispatcher.add_handler(CommandHandler('start', wake_up))
