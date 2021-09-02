@@ -87,7 +87,7 @@ updater.dispatcher.add_handler(
 updater.dispatcher.add_handler(
     MessageHandler(
         Filters.regex(
-            re.compile(r'фот\w+ {1,5}|картин\w+ {1,5}', re.IGNORECASE)
+            re.compile(r'фот\w+ {1,5}|картин\w+ {1,8}', re.IGNORECASE)
         ),
         get_images,
     )
